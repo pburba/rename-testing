@@ -1,0 +1,141 @@
+@import "bootstrap";
+
+/* Remember: '.' is a rule to style a class,
+             '#' is a rule to style a CSS ID,
+             ':' is a rule to style an attribute (?),
+             otherwise it's a rule to style an HTML tag. */
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+$hoverBlue: #0040FF;
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* These two:
+ *
+ * .center {
+ *   text-align: center;
+ * }
+ *
+ * .center h1 {
+ *   margin-bottom: 10px;
+ * }
+ *
+ * Can be replaced by this nested: */
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1 , h2 , h3 , h4 , h5 , h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: $hoverBlue;
+    text-decoration: none;
+  }
+}
+
+/* Make my sample look like the book, with a black background
+   for the nav bar.  Leaving commented out for now, but this is
+   how you do it. */
+/* .navbar-inner {
+  background-color: #000;
+  background-image: none;
+} */
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #999;
+  a {
+    color: #555;
+    &:hover {
+      color: $hoverBlue;
+      text-decoration: none;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+    &:hover {
+       color: $hoverBlue;
+       text-decoration: none;
+    }
+  }
+}
+
+/* The name says it all.  I can't figure out how to get the Home,
+   Help, and Sign In header links to turn blue on hover over, except
+   by using IDs for each li.  Grrrr! */
+#hack1, #hack2, #hack3 {
+  &:hover {
+    color: $hoverBlue;
+  }
+}
