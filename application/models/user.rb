@@ -23,3 +23,4 @@ class User < ActiveRecord::Base
     uniqueness: { case_sensitive: false }
 end#new line 1
 #new line 2
+#new line 3
