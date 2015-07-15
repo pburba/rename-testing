@@ -1,3 +1,4 @@
 A file
 newline
 newline2
+newline3
